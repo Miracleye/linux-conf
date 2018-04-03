@@ -16,8 +16,12 @@ Plugin 'Auto-Pairs'
 Plugin 'The-NERD-Commenter'
 Plugin 'The-NERD-tree'
 Plugin 'ctrlp.vim'
-"Plugin 'OmniCppComplete'
+Plugin 'OmniCppComplete'
 Plugin 'surround.vim'
+Plugin 'AutoComplPop'
+Plugin 'javacomplete'
+Plugin 'clang-complete'
+Plugin 'Syntastic'
 "Plugin 'Tagbar'
 call vundle#end()
 
@@ -30,14 +34,20 @@ call vundle#end()
 " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
 
 "ctags configuration
-"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <silent> <F2> :NERDTreeToggle<CR>
 
 "Cscope configuration
 "set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 "Taglist configuration
-"let Tlist_Show_One_File=1
-"let Tlist_Exit_OnlyWindow=1
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+nmap <silent> <F11> :TlistToggle<CR>
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 let &termencoding=&encoding
 set fileencoding=utf-8
